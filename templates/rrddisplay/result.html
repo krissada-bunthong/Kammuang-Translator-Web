@@ -1,0 +1,14 @@
+{% extends "rrddisplay/base.html" %}
+{% load static %}
+{% block body %}
+
+  
+  <!-- Tokenize -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      {{ task.foo }}
+      {{ data|default:"3 &lt; 2" }}
+    </div>
+  </section>
+
+  {% endblock %}

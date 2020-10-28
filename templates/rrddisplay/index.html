@@ -1,0 +1,59 @@
+{% extends "rrddisplay/base.html" %}
+{% load static %}
+{% block body %}
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">อัพโหลดไฟล์ .txt</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-group">
+              <input class="form-control" type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>สำหรับผู้วิจัย</h3>
+            <p class="lead mb-0">เข้าถึงเอกสารทางวิชาการภาษาคำเมือง ก้าวข้ามกำแพงภาษา สู่ความรู้จากประวัติศาสตร์</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>สำหรับนักศึกษา</h3>
+            <p class="lead mb-0">ตรวจเช็คไวยกรณ์ภาษาคำเมือง ศึกษา และ ร่วมปรับปรุงการแปลภาษา</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-people m-auto text-primary"></i>
+            </div>
+            <h3>สำหรับคนทั่วไป</h3>
+            <p class="lead mb-0">รู้ศัพท์คำเมือง ผ่านการใช้งานประโยคที่ใช้ในชีวิตประจำวัน</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}

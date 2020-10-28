@@ -4,14 +4,15 @@ from pythainlp.corpus.common import thai_words
 from pythainlp import word_tokenize
 
 def index(request):
-    return HttpResponse("<h1>H1</h1>")
+    # return HttpResponse("<h1>H1</h1>")
+    return render(request, "rrddisplay/index.html") 
 
 def result(request):
-    text = "ขอน้ำบะดาย อู้บ่าดาย อู้เล่นบะได้ก๋า จะไปบึงกาฬ"
-    list_t = word_tokenize(text,engine='mm')
+    # text = "ขอน้ำบะดาย อู้บ่าดาย อู้เล่นบะได้ก๋า จะไปบึงกาฬ"
+    # list_t = word_tokenize(text,engine='mm')
     return HttpResponse("E %s" %(read_csv()))
 
-def read_csv():
+def read_csv(request):
     #read csv file
     import csv
     KammuangDB = []
@@ -23,3 +24,14 @@ def read_csv():
 
 def data_visualization():
     return 0
+
+def tokenize(request):
+    # from pythainlp.corpus.common import thai_words
+    # from pythainlp.tokenize import Tokenizer
+
+    # text = "ขอน้ำบะดาย อู้บ่าดาย อู้เล่นบะได้ก๋า จะไปบึงกาฬ"
+    # PATH_TO_CUSTOM_DICTIONARY = './custom_dictionary.txt'
+    # _tokenizer = Tokenizer(custom_dict=PATH_TO_CUSTOM_DICTIONARY)
+    # _tokenizer.word_tokenize(text)
+    # return HttpResponse("E %s" %_tokenizer.word_tokenize(text))
+    return render(request, "rrddisplay/tokenize.html")
