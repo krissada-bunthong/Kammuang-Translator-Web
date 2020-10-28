@@ -26,12 +26,16 @@ def data_visualization():
     return 0
 
 def tokenize(request):
-    # from pythainlp.corpus.common import thai_words
-    # from pythainlp.tokenize import Tokenizer
+    from pythainlp.corpus.common import thai_words
+    from pythainlp.tokenize import Tokenizer
 
-    # text = "ขอน้ำบะดาย อู้บ่าดาย อู้เล่นบะได้ก๋า จะไปบึงกาฬ"
-    # PATH_TO_CUSTOM_DICTIONARY = './custom_dictionary.txt'
-    # _tokenizer = Tokenizer(custom_dict=PATH_TO_CUSTOM_DICTIONARY)
-    # _tokenizer.word_tokenize(text)
+    text = "ขอน้ำบะดาย อู้บ่าดาย อู้เล่นบะได้ก๋า จะไปบึงกาฬ"
+    PATH_TO_CUSTOM_DICTIONARY = './custom_dictionary.txt'
+    _tokenizer = Tokenizer(custom_dict=PATH_TO_CUSTOM_DICTIONARY)
+    text_af = _tokenizer.word_tokenize(text)
     # return HttpResponse("E %s" %_tokenizer.word_tokenize(text))
-    return render(request, "rrddisplay/tokenize.html")
+    # def index(request):
+    # testvar = 'value'
+    # return render(request, 'template.html', {'testvar': testvar})
+    
+    return render(request, "rrddisplay/tokenize.html", {'text':text,'text_af':text_af})
