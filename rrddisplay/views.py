@@ -26,6 +26,14 @@ def data_visualization():
     return 0
 
 def tokenize(request):
+    import csv
+    KammuangDB = list()
+    with open('./KammuangDB.csv','rt')as f:
+        data = csv.reader(f)
+        for row in data:
+            KammuangDB.append(row)
+    # return KammuangDB
+    
     from pythainlp.corpus.common import thai_words
     from pythainlp.tokenize import Tokenizer
 
@@ -38,4 +46,4 @@ def tokenize(request):
     # testvar = 'value'
     # return render(request, 'template.html', {'testvar': testvar})
     
-    return render(request, "rrddisplay/tokenize.html", {'text':text,'text_af':text_af})
+    return render(request, "rrddisplay/tokenize.html", {'text':text,'text_af':text_af,'KammuangDB':KammuangDB})
